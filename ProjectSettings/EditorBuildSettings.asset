@@ -6,5 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes: []
   m_configObjects:
-    com.unity.xr.magicleap.magic_leap_settings: {fileID: 11400000, guid: 1da6ceadb18dc7543bb0d90d0701914a,
+    com.unity.xr.magicleap.magic_leap_settings: {fileID: 11400000, guid: b700a7acd5b6f174e88bdb3316b2fd92,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 22f57a84d531d0344a321eddeb56ff37,
       type: 2}

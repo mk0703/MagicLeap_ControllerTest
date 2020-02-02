@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.MagicLeap;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Control6DOF : MonoBehaviour
 {
-    private MLInputController mLInputController;
+    private MLInputController _controller;
+
     // Start is called before the first frame update
     void Start()
     {
         MLInput.Start();
-        mLInputController = MLInput.GetController(MLInput.Hand.Left);
+        _controller = MLInput.GetController(MLInput.Hand.Left);
     }
 
-    void OnDestory()
+    private void OnDestroy()
     {
         MLInput.Stop();
     }
@@ -21,7 +22,7 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = mLInputController.Position;
-        transform.rotation = mLInputController.Orientation;
+        transform.position = _controller.Position;
+        transform.rotation = _controller.Orientation;
     }
 }
